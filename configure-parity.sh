@@ -35,4 +35,4 @@ echo $PASSWORD >> .parity-pass
 address="133e5245e3e5ab3f65e73120b34cc29f0f7ba504"
 echo "address: $address"
 
-parity --geth --chain kovan --keys-path .parity/keys --force-ui --reseal-min-period 0 --jsonrpc-cors "*" --jsonrpc-apis web3,eth,net,parity,traces,rpc,personal --jsonrpc-interface all --author ${address} --unlock ${address} --password .parity-pass &> parity.log
+parity --geth --chain kovan --keys-path .parity/keys --force-ui --reseal-min-period 0 --jsonrpc-cors "*" --jsonrpc-apis web3,eth,net,parity,traces,rpc,personal --jsonrpc-interface all --author ${address} --unlock ${address} --password .parity-pass &> parity.log &
