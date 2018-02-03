@@ -1,4 +1,5 @@
 Vagrant.configure("2") do |config|
+  config.vm.boot_timeout = 600
   config.vm.define "ethereum" do |ethereum|
     ethereum.vm.box = "ubuntu/xenial64"
     ethereum.vm.network :forwarded_port, guest: 8545, host: 8545
